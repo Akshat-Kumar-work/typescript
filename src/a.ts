@@ -61,7 +61,33 @@ const user = {
 }
 
 const ans = isLegal2(user);
-console.log(ans);
+
+
+//by using the interface , we can implement it as a class
+interface Person{
+    name:string;
+    age:number;
+    greet(message:string):void;
+}
+
+class Employee implements Person{
+    name:string;
+    age:number;
+
+    constructor(n:string,a:number){
+        this.name = n;
+        this.age = a;
+    }
+
+    greet(message: string): void {
+        console.log(message,"from",this.name)
+    }
+}
+
+//creating new object of Employee class with some properties
+const object = new Employee("akshat",21);
+
+
 
 
 
