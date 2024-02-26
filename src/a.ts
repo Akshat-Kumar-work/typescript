@@ -109,10 +109,10 @@ function PrintId (id:number| string) : number | string{
    return id;
 }
 
-console.log(PrintId("akshat"));
+//console.log(PrintId("akshat"));
 
 //intersection in type and interface
-//if want 1 type having properties of 2 diff type or interface or so on we use & for intersection them
+//if want 1 type having properties of 2 diff type or interface  so  we use & for intersection them
 type Employee2 = {
     name: string;
     startDate: Date;
@@ -130,6 +130,30 @@ type TeamLead = Employee2 & Manager;
     startDate: new Date(),
     department: "Software developer"
   };
+
+
+//Arrays 
+let arrStr:string[] = ["ok","yes","fine"];
+let arrNumb:number[] = [1,2,3,4];
+
+interface User2 {
+	firstName?: string;
+	lastName?: string;
+	age: number;
+}
+
+function filterUsersAbove18 ( users: User2[]){
+    return users.filter(x=>x.age>18);
+}
+
+const userr = [ {firstName:"23 age wala",age:23},{firstName:"4 age wala" , age:4},
+                {firstName:"18 age wala" ,age:18},{firstName:"1 age wala" ,age:1}];
+
+console.log(filterUsersAbove18(userr));
+
+
+
+
   
 
 
