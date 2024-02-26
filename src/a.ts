@@ -111,7 +111,26 @@ function PrintId (id:number| string) : number | string{
 
 console.log(PrintId("akshat"));
 
-
+//intersection in type and interface
+//if want 1 type having properties of 2 diff type or interface or so on we use & for intersection them
+type Employee2 = {
+    name: string;
+    startDate: Date;
+  };
+  
+interface Manager {
+    name: string;
+    department: string;
+  };
+  
+type TeamLead = Employee2 & Manager;
+  
+  const teamLead: TeamLead = {
+    name: "harkirat",
+    startDate: new Date(),
+    department: "Software developer"
+  };
+  
 
 
 
