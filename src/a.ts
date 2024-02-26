@@ -1,6 +1,8 @@
 //in js we will write the code as
 // const x = 1;
 const x: number = 1;
+let y :string;
+y="ok";
 
 function helloWorld (mess:string ){
     console.log(mess);
@@ -34,6 +36,7 @@ function delayedCall( func: ()=>void ){
 const func = (name:string):string =>  {return name;}
 
 
+//Interface
 //object type declaration, we use interface keyword to define the  object type
 //here we had created custom user type
 interface User{
@@ -86,6 +89,28 @@ class Employee implements Person{
 
 //creating new object of Employee class with some properties
 const object = new Employee("akshat",21);
+
+
+//type
+//it is used to create custom types
+//it is similar to interface as it let us aggregate data together
+type UserName =String;
+let userName :UserName;
+
+//defining Human object type using type keyword
+type Human = {
+    firstName:string;
+    lastName:string;
+    age:number;
+}
+
+//union-> in interface we cant use union but in type we can
+function PrintId (id:number| string) : number | string{
+   return id;
+}
+
+console.log(PrintId("akshat"));
+
 
 
 
