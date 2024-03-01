@@ -23,7 +23,7 @@ function isLegal (age:number):boolean{
 }
 
 
-//giving delayedCall function argument as type is function
+//giving delayedCall function argument, as type is function
 function delayedCall( func: ()=>void ){
     setTimeout(func,5000);
 };
@@ -136,7 +136,7 @@ type TeamLead = Employee2 & Manager;
 let arrStr:string[] = ["ok","yes","fine"];
 let arrNumb:number[] = [1,2,3,4];
 
-interface User2 {
+interface User2   {
 	firstName?: string;
 	lastName?: string;
 	age: number;
@@ -149,7 +149,35 @@ function filterUsersAbove18 ( users: User2[]){
 const userr = [ {firstName:"23 age wala",age:23},{firstName:"4 age wala" , age:4},
                 {firstName:"18 age wala" ,age:18},{firstName:"1 age wala" ,age:1}];
 
-console.log(filterUsersAbove18(userr));
+// console.log(filterUsersAbove18(userr));
+
+
+
+//ENUMS
+//It is used to write named constant
+//the values stored by default as number only like up is 0 , down is 1
+//to change value make up = 1 and other will continue that format
+//or if want to make it string up= "up"
+//we can use when we know there any limited set of input's and values are constant values not just any number or string 
+
+enum Directions{
+    up = "Up",down = "down",left = "left",right = "right"
+}
+
+enum Directions2{
+    up , down , left , right
+}
+
+enum Directions3 {
+    up=1 , down ,left ,right
+}
+
+function doSomething(keyPressed:Directions){
+    console.log(keyPressed);
+}
+
+console.log(Directions.down);
+
 
 
 
