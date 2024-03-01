@@ -55,5 +55,43 @@ interface Config {
   
 
 
+//RECORD AND MAP
+
+//record 
+//it give a cleaner way to type an objects
+//it is used to represent an object with key and values where key is any type and values is object
+
+interface NewUser{
+    id:string;
+    name: string;
+}
+
+type userCase1 = Record<string,{id:string ; name:string}>;
+
+const userFromUserCase1 : userCase1 = {
+    
+    'User1' : {id:"xyz",name:"akshat"},
+    'User2'  : {id:"akc",name:"gaurav"}
+}
+
+
+type userCase2 = Record<string,NewUser>;
+
+
+//MAP
+//it is an js concept
+type mapuser = {
+    name: string;
+    age:number;
+    email:string;
+}
+
+const NewUser = new Map<string,mapuser>();
+NewUser.set("user1",{name:"akshat",age:21,email:"@gmail.com"})
+
+
+
+
+
 
 
