@@ -176,7 +176,23 @@ function doSomething(keyPressed:Directions){
     console.log(keyPressed);
 }
 
-console.log(Directions.down);
+//console.log(Directions.down);
+
+
+//GENERICS
+//it is used to return the right type of value in function if the values type can be multiple
+//users can send different type of values in inputs without any type errors without using union (  |  )
+
+function identity<T>(arg:T):T{
+    return arg;
+}
+
+let output1 = identity<string>("mystring");
+console.log(output1)
+let output2 = identity<number>(123);
+
+
+
 
 
 
