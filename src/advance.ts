@@ -91,6 +91,19 @@ NewUser.set("user1",{name:"akshat",age:21,email:"@gmail.com"})
 
 
 
+//EXCLUDE
+//if a function that accept several types of input but we want to exclude specific type from being passed to it use exclude
+
+type Event1 = 'click' | 'scroll' | 'mousemove';
+type ExcludeEvent = Exclude<Event1, 'scroll'>;
+
+const handleEvent = (event: ExcludeEvent) => {
+  console.log(`Handling event: ${event}`);
+};
+
+handleEvent('click'); 
+
+
 
 
 
