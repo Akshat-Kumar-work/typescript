@@ -182,6 +182,7 @@ function doSomething(keyPressed:Directions){
 //GENERICS
 //it is used to return the right type of value in function if the values type can be multiple
 //users can send different type of values in inputs without any type errors without using union (  |  )
+//or we dont know the type of the functin argument or we are having the multiple type we can use generics
 
 function identity<T>(arg:T):T{
     return arg;
