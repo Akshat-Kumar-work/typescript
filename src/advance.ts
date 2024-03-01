@@ -26,3 +26,34 @@ function updateUser(updatedProps:updatePropsOptional){
 //we can use partial to make all the properties of type to optional
 type updatePropsOptional = Partial<updateProps>;
 
+
+
+//READ ONLY
+//it will not make you change the properties of any 
+//it is used when we have a config variables like endpoints or apikey etc we can use it 
+type readOnlyUser = {
+    readonly name:string;
+    readonly age: number;
+}
+
+const person : readOnlyUser ={
+    name:"akshat",
+    age:34
+}
+
+//or 
+
+interface Config {
+     endpoint: string;
+     apiKey: string;
+  }
+  
+  const config: Readonly<Config> = {
+    endpoint: 'https://api.example.com',
+    apiKey: 'abcdef123456',
+  };
+  
+
+
+
+
