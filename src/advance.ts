@@ -66,6 +66,8 @@ interface NewUser{
     name: string;
 }
 
+type userCase2 = Record<string,NewUser>;
+
 type userCase1 = Record<string,{id:string ; name:string}>;
 
 const userFromUserCase1 : userCase1 = {
@@ -75,7 +77,7 @@ const userFromUserCase1 : userCase1 = {
 }
 
 
-type userCase2 = Record<string,NewUser>;
+
 
 
 //MAP
@@ -102,6 +104,9 @@ const handleEvent = (event: ExcludeEvent) => {
 };
 
 handleEvent('click'); 
+
+
+
 
 
 

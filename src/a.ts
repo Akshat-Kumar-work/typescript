@@ -181,7 +181,7 @@ function doSomething(keyPressed:Directions){
 
 //GENERICS
 //it is used to return the right type of value in function if the values type can be multiple
-//users can send different type of values in inputs without any type errors without using union (  |  )
+//users can send different type of values in inputs without any type errors
 //or we dont know the type of the functin argument or we are having the multiple type we can use generics
 
 function identity<T>(arg:T):T{
@@ -191,6 +191,13 @@ function identity<T>(arg:T):T{
 let output1 = identity<string>("mystring");
 console.log(output1)
 let output2 = identity<number>(123);
+
+
+
+
+
+
+
 
 
 

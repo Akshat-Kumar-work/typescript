@@ -5,9 +5,12 @@
   "main": "build/a.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node build/a.js"
+    "start": "node build/a.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  }
 }
